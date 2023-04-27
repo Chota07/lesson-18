@@ -11,7 +11,7 @@
     <div id="clock"></div>
     <section class="slider">
         <div class="slider-wrapper">
-            <div class="slide">
+            <div class="slide" id="first">
                 <img class="img" src="./assets/images/1.jpg" alt="" />
                 <div class="desc">
                     <h3 class="title">slide 1</h3>
@@ -22,8 +22,15 @@
                         dolorem eius officiis praesentium aliquam?
                     </p>
                 </div>
+                <div class="dots">
+                    <button class="dot dot_active first-dot"></button>
+                    <button class="dot second-dot"></button>
+                    <button class="dot third-dot"></button>
+                    <button class="dot fourth-dot"></button>
+                    <button class="dot fifth-dot"></button>
+                </div>
             </div>
-            <div class="slide">
+            <div class="slide" id="second">
                 <img class="img" src="./assets/images/2.jpg" alt="" />
                 <div class="desc">
                     <h3 class="title">slide 2</h3>
@@ -34,8 +41,15 @@
                         dolorem eius officiis praesentium aliquam?
                     </p>
                 </div>
+                <div class="dots">
+                    <button class="dot first-dot"></button>
+                    <button class="dot dot_active second-dot"></button>
+                    <button class="dot third-dot"></button>
+                    <button class="dot fourth-dot"></button>
+                    <button class="dot fifth-dot"></button>
+                </div>
             </div>
-            <div class="slide">
+            <div class="slide" id="third">
                 <img class="img" src="./assets/images/3.jpg" alt="" />
                 <div class="desc">
                     <h3 class="title">slide 3</h3>
@@ -46,8 +60,15 @@
                         dolorem eius officiis praesentium aliquam?
                     </p>
                 </div>
+                <div class="dots">
+                    <button class="dot first-dot"></button>
+                    <button class="dot second-dot"></button>
+                    <button class="dot dot_active third-dot"></button>
+                    <button class="dot fourth-dot"></button>
+                    <button class="dot fifth-dot"></button>
+                </div>
             </div>
-            <div class="slide">
+            <div class="slide" id="fourth">
                 <img class="img" src="./assets/images/4.jpg" alt="" />
                 <div class="desc">
                     <h3 class="title">slide 4</h3>
@@ -58,8 +79,15 @@
                         dolorem eius officiis praesentium aliquam?
                     </p>
                 </div>
+                <div class="dots">
+                    <button class="dot first-dot"></button>
+                    <button class="dot second-dot"></button>
+                    <button class="dot third-dot"></button>
+                    <button class="dot dot_active fourth-dot"></button>
+                    <button class="dot fifth-dot"></button>
+                </div>
             </div>
-            <div class="slide">
+            <div class="slide" id="fifth">
                 <img class="img" src="./assets/images/5.jpg" alt="" />
                 <div class="desc">
                     <h3 class="title">slide 5</h3>
@@ -70,21 +98,21 @@
                         dolorem eius officiis praesentium aliquam?
                     </p>
                 </div>
+                <div class="dots">
+                    <button class="dot first-dot"></button>
+                    <button class="dot second-dot"></button>
+                    <button class="dot third-dot"></button>
+                    <button class="dot fourth-dot"></button>
+                    <button class="dot dot_active fifth-dot"></button>
+                </div>
             </div>
         </div>
         <div class="slider-actions">
             <button class="prev slide-btn">⇦</button>
             <button class="next slide-btn">⇨</button>
         </div>
-        <div class="dots">
-            <div class="dot dot_active"></div>
-            <div class="dot dot_active"></div>
-            <div class="dot dot_active"></div>
-            <div class="dot dot_active"></div>
-            <div class="dot dot_active"></div>
-        </div>
     </section>    
-    <div class="countdown-container">
+    <div class="countdown-box">
         <div class="countdown-item">
           <span class="countdown-number" id="days"></span>
           <span class="countdown-label">Days</span>

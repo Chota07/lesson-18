@@ -16,22 +16,17 @@ const myClock = setInterval(()=>{
     s=(s<10) ? "0" + s : s;
     let clock=`${h}:${m}:${s} ${t}`
     document.getElementById("clock").innerText = clock;
-    // setInterval(myClock, 1000);
 }, 1000)
 
-
 // slider
-
 function mainSlider() {
 	const slides = document.querySelectorAll(".slide");
 	const next = document.querySelector(".next");
 	const prev = document.querySelector(".prev");
     const slider = document.querySelector(".slider")
-    let dots = document.querySelectorAll(".dot")
 	let slideIntervalId = null;
 
 	let activeIndex = 0;
-    let activeDot = 0;
 
 	function renderSlides() {
 		slides.forEach((el, i) => {
@@ -42,25 +37,12 @@ function mainSlider() {
 			}
 		});
 	}
-
-    function renderDots() {
-		dots.forEach((el, i) => {
-			if (i === activeDot) {
-				el.classList.add("dot_active");
-			} else {
-				el.classList.remove("dot_active");
-			}
-		});
-	}
-
 	function nextFn() {
 		if (activeIndex === slides.length - 1) {
 			activeIndex = 0;
 		} else {
 			activeIndex++;
 		}
-
-		// console.log(activeIndex);
 		renderSlides();
 	}
 
@@ -70,42 +52,13 @@ function mainSlider() {
 		} else {
 			activeIndex--;
 		}
-
-		renderSlides();
-
-		// console.log(activeIndex);
-	}
-
-    function nextDot() {
-		if (activeDot === dots.length - 1) {
-			activeDot = 0;
-		} else {
-			activeDot++;
-		}
-
-		// console.log(activeIndex);
 		renderSlides();
 	}
-
-	function prevDot() {
-		if (activeDot === 0) {
-			activeDot = dots.length - 1;
-		} else {
-			activeDot--;
-		}
-
-		renderSlides();
-
-		// console.log(activeIndex);
-	}
-
-	// console.log(slides);
 
 	renderSlides();
-    renderDots();
     
-	next.addEventListener("click", nextDot);
-	prev.addEventListener("click", prevDot);
+	next.addEventListener("click", nextFn);
+	prev.addEventListener("click", prevFn);
 
 	slideIntervalId = setInterval(nextFn, 5000);
     function setInterval1(){
@@ -128,13 +81,68 @@ function mainSlider() {
 			prevFn();
 		}
 	});
+
+	const firstDotBtn = document.querySelectorAll(".first-dot");
+	const firstSlide = document.getElementById("first");
+
+	const secondDotBtn = document.querySelectorAll(".second-dot");
+	const secondSlide = document.getElementById("second");
+
+	const thirdDotBtn = document.querySelectorAll(".third-dot");
+	const thirdSlide = document.getElementById("third");
+
+	const fourthDotBtn = document.querySelectorAll(".fourth-dot");
+	const fourthSlide = document.getElementById("fourth");
+
+	const fifthDotBtn = document.querySelectorAll(".fifth-dot");
+	const fifthSlide = document.getElementById("fifth");
+
+	firstDotBtn.forEach((firstDotBtn) => {
+		firstDotBtn.addEventListener("click", () => {
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			  });
+			firstSlide.classList.add("active")
+		  });
+	})
+	secondDotBtn.forEach(secondDotBtn => {
+		secondDotBtn.addEventListener("click", () => {
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			  });
+			secondSlide.classList.add("active");
+		  });
+	});
+	thirdDotBtn.forEach(thirdDotBtn => {
+		thirdDotBtn.addEventListener("click", () => {
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			  });
+			thirdSlide.classList.add("active");
+		  });
+	});
+	fourthDotBtn.forEach(fourthDotBtn => {
+		fourthDotBtn.addEventListener("click", () => {
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			  });
+			fourthSlide.classList.add("active");
+		  });
+	});
+	fifthDotBtn.forEach(fifthDotBtn => {
+		fifthDotBtn.addEventListener("click", () => {
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			  });
+			fifthSlide.classList.add("active");
+		  });
+	});
+
 }
 mainSlider();
 
-
 // countdown
 const countdownDate = new Date("April 28, 2023 20:00:00").getTime();
-
 const countdown = setInterval(() => {
   const now = new Date().getTime();
   const distance = countdownDate - now;

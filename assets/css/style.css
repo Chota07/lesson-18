@@ -91,22 +91,25 @@
     display: flex;
     gap: 5px;
     justify-content: center;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .dot{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     width: 10px;
     height: 10px;
     opacity: 0.5;
     border-radius: 50%;
+	border: none;
 }
 .dot_active{
     opacity: 100%;
 }
 
-
-
-/*  */
-.countdown-container {
+/*countdown clock*/
+.countdown-box {
     display: flex;
     max-width: 400px;
     margin: auto;
